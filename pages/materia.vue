@@ -1,12 +1,26 @@
 <template>
   <v-container>
     <v-row align="center" justify="center">
-      <div class="materia-box window-size ff7-card">
-        <command-materia />
-        <independent-materia />
-        <magic-materia />
-        <summon-materia />
-        <support-materia />
+      <div class="materia-box">
+        <div class="character-box ff7-card">
+          <command-materia />
+          <independent-materia />
+          <magic-materia />
+          <summon-materia />
+          <support-materia />
+        </div>
+        <div class="message-box ff7-card">
+          <command-materia />
+        </div>
+        <div class="materias-box ff7-card">
+          <command-materia />
+        </div>
+        <div class="status-box ff7-card">
+          <command-materia />
+        </div>
+        <div class="page-box ff7-card">
+          <command-materia />
+        </div>
       </div>
     </v-row>
   </v-container>
@@ -38,14 +52,42 @@ export default class Materia extends PageBase {}
   position: relative;
 }
 
-.top-team {
+.character-box {
   position: relative;
-  top: 30px;
+  width: 600px;
+  height: 150px;
+  margin: 6px 0 6px 0;
 }
-
-.top-menu {
-  position: absolute;
-  top: 0px;
-  right: -100px;
+.message-box {
+  position: relative;
+  z-index: 2;
+  width: 386px;
+  height: 300px;
+  margin: 0px 0px 0px 0px;
+  padding: 60px 0px 0px 10px;
+  float: left;
+}
+.materias-box {
+  position: relative;
+  z-index: 1;
+  left: 380px;
+  width: 220px;
+  height: 300px;
+  padding: 60px 0px 0px 15px;
+}
+.status-box {
+  position: relative;
+  z-index: 3;
+  width: 600px;
+  height: 50px;
+  top: -300px;
+}
+.page-box {
+  position: relative;
+  z-index: 2;
+  width: 150px;
+  height: 50px;
+  top: -506px;
+  left: 450px;
 }
 </style>
