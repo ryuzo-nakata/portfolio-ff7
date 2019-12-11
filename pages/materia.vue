@@ -2,8 +2,11 @@
   <v-container>
     <v-row align="center" justify="center">
       <div class="materia-box window-size ff7-card">
-        <materia-parts />
-        <materia-parts />
+        <command-materia />
+        <independent-materia />
+        <magic-materia />
+        <summon-materia />
+        <support-materia />
       </div>
     </v-row>
   </v-container>
@@ -12,10 +15,20 @@
 <script lang="ts">
 import { Component } from 'vue-property-decorator'
 import PageBase from '~/logic/vue/PageBase'
-import MateriaParts from '~/components/parts/MateriaParts.vue'
+import CommandMateria from '~/components/templates/CommandMateria.vue'
+import IndependentMateria from '~/components/templates/IndependentMateria.vue'
+import MagicMateria from '~/components/templates/MagicMateria.vue'
+import SummonMateria from '~/components/templates/SummonMateria.vue'
+import SupportMateria from '~/components/templates/SupportMateria.vue'
 
 @Component({
-  components: { MateriaParts }
+  components: {
+    CommandMateria,
+    IndependentMateria,
+    MagicMateria,
+    SummonMateria,
+    SupportMateria
+  }
 })
 export default class Materia extends PageBase {}
 </script>

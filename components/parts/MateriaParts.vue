@@ -1,20 +1,22 @@
 <template>
   <div class="wrapper">
-    <div class="materia" />
+    <div class="materia" :style="{ background: color }" />
     <div class="downlight1" />
     <div class="highlight2" />
     <div class="highlight3" />
-    <!-- <div class="shadow" />
-    <div class="dropshadow" /> -->
+    <div class="highlight4" />
   </div>
 </template>
 
 <script lang="ts">
-import { Component } from 'vue-property-decorator'
+import { Component, Prop } from 'vue-property-decorator'
 import PortfolioVueEx from '~/logic/vue/PortfolioVueEx'
 
 @Component({})
-export default class MateriaParts extends PortfolioVueEx {}
+export default class MateriaParts extends PortfolioVueEx {
+  @Prop()
+  color: string
+}
 </script>
 
 <style scoped lang="scss">
@@ -41,11 +43,7 @@ body {
   height: 20px;
   z-index: 0;
   border-radius: 50%;
-  background: radial-gradient(
-    closest-side at 49% 49%,
-    rgba(150, 150, 150, 1) 0%,
-    rgba(100, 21, 21, 1) 30%
-  );
+  background: rgb(43, 100, 21, 1);
 }
 .downlight1 {
   position: absolute;
@@ -83,32 +81,15 @@ body {
   filter: blur(1px);
   opacity: 0.15;
 }
-
-.shadow {
+.highlight4 {
   position: absolute;
-  top: 69%;
-  left: 64%;
-  z-index: 1;
-  width: 51px;
-  height: 18px;
+  top: 40%;
+  left: 40%;
+  width: 4px;
+  height: 4px;
+  z-index: 0;
   border-radius: 50%;
-  border-top: 1px solid #211;
-  transform: rotate(130deg);
+  background: rgba(200, 200, 200, 1);
   filter: blur(1px);
-}
-.dropshadow {
-  width: 90px;
-  height: 30px;
-  position: absolute;
-  left: 50%;
-  top: 85%;
-  z-index: -1;
-  transform: translateX(-50%);
-  background: radial-gradient(
-    farthest-side at center,
-    rgba(20, 0, 10, 0.8) 25%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  filter: blur(0.5px);
 }
 </style>
