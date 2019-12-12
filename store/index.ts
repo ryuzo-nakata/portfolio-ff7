@@ -36,8 +36,8 @@ export const state = () => ({
     },
     {
       id: '2',
-      name: '中田隆三',
-      image: require('~/assets/cloud.jpg'),
+      name: 'ティファ',
+      image: require('~/assets/tifa.jpg'),
       level: 99,
       hp: 9999,
       maxHp: 9999,
@@ -52,8 +52,8 @@ export const state = () => ({
     },
     {
       id: '3',
-      name: '中田隆三',
-      image: require('~/assets/cloud.jpg'),
+      name: 'ゴリラ',
+      image: require('~/assets/barret.jpg'),
       level: 99,
       hp: 9999,
       maxHp: 9999,
