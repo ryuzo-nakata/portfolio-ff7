@@ -4,7 +4,6 @@
     <div class="downlight1" />
     <div class="highlight2" />
     <div class="highlight3" />
-    <div class="highlight4" />
   </div>
 </template>
 
@@ -80,16 +79,5 @@ body {
   border-radius: 50%;
   filter: blur(1px);
   opacity: 0.15;
-}
-.highlight4 {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  width: 4px;
-  height: 4px;
-  z-index: 0;
-  border-radius: 50%;
-  background: rgba(200, 200, 200, 1);
-  filter: blur(1px);
 }
 </style>

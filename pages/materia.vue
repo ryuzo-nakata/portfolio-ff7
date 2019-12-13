@@ -51,6 +51,31 @@
                 </span>
               </v-row>
             </v-col>
+            <v-col cols="7">
+              <v-row>
+                <span class="attack-margin">
+                  <span class="status-item">武器:</span>
+                  <span>ノートPC</span>
+                </span>
+              </v-row>
+              <v-row>
+                <command-materia />
+                <command-materia />
+              </v-row>
+              <v-row>
+                <span class="defence-margin">
+                  <span class="status-item">防具:</span>
+                  <span>お供のコーヒー</span>
+                </span>
+              </v-row>
+              <v-row>
+                <div class="equipment">
+                  <command-materia class="content" />
+                  <div class="highlight4" />
+                </div>
+                <div class="equipment"></div>
+              </v-row>
+            </v-col>
           </v-row>
         </div>
         <div class="message-box ff7-card">
@@ -169,20 +194,41 @@ export default class Materia extends PageBase {}
 .mp-margin {
   margin-left: 6px;
 }
-
-.next-level {
-  font-size: 60%;
+.attack-margin {
+  margin: 6px 0px 6px 0;
 }
-.next-level-margin {
-  margin-left: 15px;
-  margin-right: 0px;
+.defence-margin {
+  margin: 6px 0px 6px 0;
 }
-
-.limit {
-  font-size: 60%;
+.equipment {
+  width: 24px;
+  height: 24px;
+  z-index: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    closest-side at 49% 49%,
+    rgb(150, 150, 150) 0%,
+    rgb(40, 40, 40) 25%,
+    rgb(40, 40, 40) 70%,
+    rgb(100, 100, 100) 92%
+  );
+  background-color: transparent;
+  box-shadow: inset 6px 6px 2px -6px rgba(200, 200, 200, 1);
+  .content {
+    position: relative;
+    top: 2.2px;
+    left: 1px;
+  }
 }
-.limit-margin {
-  margin-left: 15px;
-  margin-right: 0px;
+.highlight4 {
+  position: relative;
+  top: -40%;
+  left: 40%;
+  width: 4px;
+  height: 4px;
+  z-index: 2;
+  border-radius: 50%;
+  background: rgba(150, 150, 150, 1);
+  filter: blur(1px);
 }
 </style>
