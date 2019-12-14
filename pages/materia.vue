@@ -131,13 +131,7 @@
             {{ selectedMateria.name }}
           </v-row>
         </div>
-        <div class="materias-box ff7-card">
-          <command-materia />
-          <independent-materia />
-          <magic-materia />
-          <summon-materia />
-          <support-materia />
-        </div>
+        <div class="materias-box ff7-card"></div>
         <div class="status-box ff7-card">
           {{ description }}
         </div>
