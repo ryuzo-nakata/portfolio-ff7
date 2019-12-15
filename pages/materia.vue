@@ -111,22 +111,22 @@
         </div>
         <div class="message-box ff7-card">
           <v-row v-if="selectedMateria !== ''">
-            <command-materia class="content" v-if="selectedMateria.type == 1" />
+            <command-materia v-if="selectedMateria.type == 1" class="content" />
             <independent-materia
-              class="content"
               v-else-if="selectedMateria.type == 2"
+              class="content"
             />
             <magic-materia
-              class="content"
               v-else-if="selectedMateria.type == 3"
+              class="content"
             />
             <summon-materia
-              class="content"
               v-else-if="selectedMateria.type == 4"
+              class="content"
             />
             <support-materia
-              class="content"
               v-else-if="selectedMateria.type == 5"
+              class="content"
             />
             {{ selectedMateria.name }}
           </v-row>
